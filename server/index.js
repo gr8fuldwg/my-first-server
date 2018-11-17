@@ -7,12 +7,10 @@ app.get('/', (request, response) => {
     response.send('YAYYYYYY!!!');
 });
 
-app.get('hello/:name', (req, res) => {
+app.get('/hello/:name', (req, res) => {
     const name = req.params.name
     res.status(200);
-    res.json({
-        name: name,
-    });
+    res.send(`Hello ${name}`);
 });
 
 app.listen(port, () => {
