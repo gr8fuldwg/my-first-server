@@ -11,7 +11,7 @@
     "dev": "run-p dev:*",
     "postinstall:server": "cd server && npm install",
     "postinstall:client": "cd client && npm install",
-    "postinstall": "cd server && npm install",
+    "postinstall": "run-p postinstall:*",
     "heroku-postbuild": "cd client && npm run build"
   },
   "repository": {
