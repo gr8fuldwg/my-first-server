@@ -14,7 +14,6 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.get('/pizzas', (req, res) => {
-    const name = req.params.name
     res.status(200);
     res.send({
         pizzas : [
@@ -31,7 +30,6 @@ app.get('/pizzas', (req, res) => {
 })
 
 app.get('/cookies', (req, res) => {
-    const name = req.params.name
     res.status(200);
     res.send({
         cookies: 
